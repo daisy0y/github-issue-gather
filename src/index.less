@@ -1,0 +1,32 @@
+@import '~antd/dist/antd.less';
+@import './assets/less/reset.less';
+
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('assets/fonts/GmarketSansTTF/GmarketSansTTFLight.ttf')
+      format('opentype'),
+    url('assets/fonts/GmarketSansTTF/GmarketSansLight.otf') format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('assets/fonts/GmarketSansTTF/GmarketSansTTFMedium.ttf')
+      format('opentype'),
+    url('assets/fonts/GmarketSansTTF/GmarketSansMedium.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('assets/fonts/GmarketSansTTF/GmarketSansTTFBold.ttf')
+      format('opentype'),
+    url('assets/fonts/GmarketSansTTF/GmarketSansBold.otf') format('opentype');
+  font-weight: 700;
+}
+body,
+html {
+  max-width: 750px;
+  margin: 0 auto;
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
