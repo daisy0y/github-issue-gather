@@ -1,27 +1,52 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { Suspense, useEffect } from 'react';
+import { Route, Switch } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
 
-const StyledApp = styled.div`
-  .light {
-    font-family: 'GmarketSansLight';
-  }
-  .medium {
-    font-family: 'GmarketSansMedium';
-  }
-  .bold {
-    font-family: 'GmarketSansBold';
-  }
-`;
+import { Spin } from 'antd';
+
+import { routes } from 'routes';
+import NotFoundResult from 'components/NotFoundResult';
+import {
+  getMyBookMarkAction,
+  getRecentlySearchListAction
+} from 'module/github';
+import { StoreState } from './module/index';
+
 const App = () => {
-  const hello = 'asdf';
-  console.log(hello, 'hello');
+  const { bookMarkList, recentlySearch } = useSelector(
+    (state: StoreState) => state.githubState
+  );
+  const bookMark = localStorage.getItem('bookMark');
+  const recently = localStorage.getItem('recentlySearch');
+  const dispatch = useDispatch();
+
+  const getBookMarkList = () => {
+    if (bookMark && !bookMarkList) dispatch(getMyBookMarkAction());
+  };
+
+  const getRecentlySearchList = () => {
+    if (recently && !recentlySearch) dispatch(getRecentlySearchListAction());
+  };
+
+  useEffect(() => {
+    getBookMarkList();
+    getRecentlySearchList();
+  }, []);
 
   return (
-    <StyledApp>
-      <span className="light">라이트라이트</span>
-      <span className="medium">미디우미미두움</span>
-      <span className="bold">볼드볼드</span>
-    </StyledApp>
+    <Suspense fallback={<Spin />}>
+      <Switch>
+        {routes.public.map((item, index) => (
+          <Route
+            key={index}
+            path={item.path}
+            component={item.component}
+            exact
+          />
+        ))}
+        <Route path="*" component={NotFoundResult} />
+      </Switch>
+    </Suspense>
   );
 };
 
