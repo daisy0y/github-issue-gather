@@ -1,26 +1,29 @@
 {
   "files": {
-    "static/js/0.57682e82.chunk.js": "/github-issue-gather/static/js/0.57682e82.chunk.js",
-    "static/js/0.57682e82.chunk.js.map": "/github-issue-gather/static/js/0.57682e82.chunk.js.map",
-    "main.js": "/github-issue-gather/static/js/main.4bc3ea29.chunk.js",
-    "main.js.map": "/github-issue-gather/static/js/main.4bc3ea29.chunk.js.map",
-    "runtime-main.js": "/github-issue-gather/static/js/runtime-main.129f11b6.js",
-    "runtime-main.js.map": "/github-issue-gather/static/js/runtime-main.129f11b6.js.map",
-    "static/js/3.2953dbe5.chunk.js": "/github-issue-gather/static/js/3.2953dbe5.chunk.js",
-    "static/js/3.2953dbe5.chunk.js.map": "/github-issue-gather/static/js/3.2953dbe5.chunk.js.map",
-    "static/js/4.2a2d1ea5.chunk.js": "/github-issue-gather/static/js/4.2a2d1ea5.chunk.js",
-    "static/js/4.2a2d1ea5.chunk.js.map": "/github-issue-gather/static/js/4.2a2d1ea5.chunk.js.map",
-    "static/js/5.e0087e21.chunk.js": "/github-issue-gather/static/js/5.e0087e21.chunk.js",
-    "static/js/5.e0087e21.chunk.js.map": "/github-issue-gather/static/js/5.e0087e21.chunk.js.map",
-    "static/js/6.ea35bbe7.chunk.js": "/github-issue-gather/static/js/6.ea35bbe7.chunk.js",
-    "static/js/6.ea35bbe7.chunk.js.map": "/github-issue-gather/static/js/6.ea35bbe7.chunk.js.map",
+    "static/js/0.b3e3bad3.chunk.js": "/github-issue-gather/static/js/0.b3e3bad3.chunk.js",
+    "static/js/0.b3e3bad3.chunk.js.map": "/github-issue-gather/static/js/0.b3e3bad3.chunk.js.map",
+    "main.css": "/github-issue-gather/static/css/main.6a245c77.chunk.css",
+    "main.js": "/github-issue-gather/static/js/main.f15dd1b0.chunk.js",
+    "main.js.map": "/github-issue-gather/static/js/main.f15dd1b0.chunk.js.map",
+    "runtime-main.js": "/github-issue-gather/static/js/runtime-main.146c29ca.js",
+    "runtime-main.js.map": "/github-issue-gather/static/js/runtime-main.146c29ca.js.map",
+    "static/js/3.e833c010.chunk.js": "/github-issue-gather/static/js/3.e833c010.chunk.js",
+    "static/js/3.e833c010.chunk.js.map": "/github-issue-gather/static/js/3.e833c010.chunk.js.map",
+    "static/js/4.0878ddba.chunk.js": "/github-issue-gather/static/js/4.0878ddba.chunk.js",
+    "static/js/4.0878ddba.chunk.js.map": "/github-issue-gather/static/js/4.0878ddba.chunk.js.map",
+    "static/js/5.aab6e514.chunk.js": "/github-issue-gather/static/js/5.aab6e514.chunk.js",
+    "static/js/5.aab6e514.chunk.js.map": "/github-issue-gather/static/js/5.aab6e514.chunk.js.map",
+    "static/js/6.02410aa5.chunk.js": "/github-issue-gather/static/js/6.02410aa5.chunk.js",
+    "static/js/6.02410aa5.chunk.js.map": "/github-issue-gather/static/js/6.02410aa5.chunk.js.map",
     "index.html": "/github-issue-gather/index.html",
-    "static/js/3.2953dbe5.chunk.js.LICENSE.txt": "/github-issue-gather/static/js/3.2953dbe5.chunk.js.LICENSE.txt",
-    "static/media/index.aa3906de.less": "/github-issue-gather/static/media/index.aa3906de.less"
+    "static/css/main.6a245c77.chunk.css.map": "/github-issue-gather/static/css/main.6a245c77.chunk.css.map",
+    "static/js/3.e833c010.chunk.js.LICENSE.txt": "/github-issue-gather/static/js/3.e833c010.chunk.js.LICENSE.txt",
+    "static/media/index.less": "/github-issue-gather/static/media/GmarketSansTTFMedium.d4bac6b1.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.129f11b6.js",
-    "static/js/3.2953dbe5.chunk.js",
-    "static/js/main.4bc3ea29.chunk.js"
+    "static/js/runtime-main.146c29ca.js",
+    "static/js/3.e833c010.chunk.js",
+    "static/css/main.6a245c77.chunk.css",
+    "static/js/main.f15dd1b0.chunk.js"
   ]
 }
