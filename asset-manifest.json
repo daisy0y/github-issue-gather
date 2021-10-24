@@ -2,8 +2,8 @@
   "files": {
     "static/js/0.57682e82.chunk.js": "/github-issue-gather/static/js/0.57682e82.chunk.js",
     "static/js/0.57682e82.chunk.js.map": "/github-issue-gather/static/js/0.57682e82.chunk.js.map",
-    "main.js": "/github-issue-gather/static/js/main.69f63685.chunk.js",
-    "main.js.map": "/github-issue-gather/static/js/main.69f63685.chunk.js.map",
+    "main.js": "/github-issue-gather/static/js/main.4bc3ea29.chunk.js",
+    "main.js.map": "/github-issue-gather/static/js/main.4bc3ea29.chunk.js.map",
     "runtime-main.js": "/github-issue-gather/static/js/runtime-main.129f11b6.js",
     "runtime-main.js.map": "/github-issue-gather/static/js/runtime-main.129f11b6.js.map",
     "static/js/3.2953dbe5.chunk.js": "/github-issue-gather/static/js/3.2953dbe5.chunk.js",
@@ -21,6 +21,6 @@
   "entrypoints": [
     "static/js/runtime-main.129f11b6.js",
     "static/js/3.2953dbe5.chunk.js",
-    "static/js/main.69f63685.chunk.js"
+    "static/js/main.4bc3ea29.chunk.js"
   ]
 }
