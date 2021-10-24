@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 import styled from 'styled-components';
 import { Divider, Empty, Skeleton, List } from 'antd';
