@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# github-issue-gather
+>pc,mobile 어디서든, 자주 방문하는 repository를 즐겨찾기하고 issue를 모아보세요!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align='center'>
+  <img src='https://user-images.githubusercontent.com/61371367/138706355-ff93522a-51e1-4375-b04a-af5364d98489.png' width='400'/>
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+### 설치 방법
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+소스코드 다운로드하여 프로젝트 환경 구성하기
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. github repository 우측 상단의 녹색 버튼을 누른 후 'Download Zip' 버튼을 눌러 코드를 다운 받은 후 원하는곳에 압축을 해제합니다.
+2. ```npm install``` 터미널에서 해당 명령어를 입력해 필요한 패키지를 인스톨합니다.
+3. ```npm start``` 터미널에 해당 명령어를 입력해 프로젝트를 실행합니다.
+4. 프로젝트가 실행되면 [http://localhost:3000/github-issue-gather](http://localhost:3000/github-issue-gather) 페이지로 이동합니다.
 
-### `npm test`
+Git Clone으로 프로젝트 환경 구성하기
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. github repository 우측 상단의 녹색 버튼을 누른 후 'Clone with HTTPS'의 repository 주소를 복사합니다.
+2. 원하는곳에서 터미널에 ```git clone https://github.com/daisy0y/github-issue-gather.git``` 명령어를 입력해 코드를 내려 받습니다.
+3. ```npm install``` 터미널에서 해당 명령어를 입력해 필요한 패키지를 인스톨합니다.
+4. ```npm start``` 터미널에 해당 명령어를 입력해 프로젝트를 실행합니다.
+5. 프로젝트가 실행되면 [http://localhost:3000/github-issue-gather](http://localhost:3000/github-issue-gather) 페이지로 이동합니다.
 
-### `npm run build`
+### 사용 방법
+<p align='center'>
+  <img src='https://user-images.githubusercontent.com/61371367/138714981-169288a9-6911-420a-bac7-f71dd31e2b7b.gif' width='400' />
+</p>
+1. 상단의 Input 형태의 버튼을 누르면 검색 모달이 토글됩니다.
+2. 검색 모달에서 원하는 repository명을 검색하면 관련 된 이름의 repository 목록이 생성됩니다. list는 한번에 10개씩 호출 됩니다.
+3. issue를 모아보기 원하는 repository를 북마크 버튼을 누르면 북마크에 저장됩니다.
+4. 메인 페이지로 돌아오면 해당 repository의 이슈들을 get 해옵니다. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align='center'>
+  <img src='https://user-images.githubusercontent.com/61371367/138715527-d49f0446-58c1-4ac7-b60a-43d6dee20aa3.gif' width='400' />
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. 최대 10개의 최근 검색어가 저장됩니다.
+6. 10개가 초과 될 경우 가장 먼저 저장 된 검색어가 제거되며 최근 검색어가 저장됩니다.
+7. 검색어를 누르면 해당 검색어 결과 페이지로 이동합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align='center'>
+  <img src='https://user-images.githubusercontent.com/61371367/138716319-060e75d3-4dd6-4753-9dfc-2957daf5d722.gif' width='400' />
+</p>
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+8. 최대 4개의 북마크를 저장 할 수 있습니다.
+9. 북마크 해제시 issue 리스트를 새롭게 렌더링합니다.
