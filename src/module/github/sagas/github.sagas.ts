@@ -120,7 +120,11 @@ function* removeBookMarkSaga(
     const parse = ls && JSON.parse(ls);
     const remove = parse.filter((item: bookMarkList) => item.id !== payload.id);
 
-    localStorage.setItem('bookMark', JSON.stringify(remove));
+    if (remove?.length) {
+      localStorage.setItem('bookMark', JSON.stringify(remove));
+    } else {
+      localStorage.setItem('bookMark', '');
+    }
 
     yield put(Actions.removeBookMarkAction.success(remove));
   } catch (error) {
@@ -182,7 +186,11 @@ function* removeRecentlySearchSaga(
       (item: addRecentlySearch) => item.id !== payload.id
     );
 
-    localStorage.setItem('recentlySearch', JSON.stringify(remove));
+    if (remove.length) {
+      localStorage.setItem('recentlySearch', JSON.stringify(remove));
+    } else {
+      localStorage.setItem('recentlySearch', '');
+    }
 
     yield put(Actions.removeRecentlySearchAction.success(remove));
   } catch (error) {
