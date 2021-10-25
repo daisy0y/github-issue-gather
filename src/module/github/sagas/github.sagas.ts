@@ -21,10 +21,14 @@ function* getRepositorySaga(
 ) {
   try {
     const payload = action.payload;
+
+    if (payload.page === 1) yield delay(500);
+
     const data: listUserReposResponse = yield call(
       githubAPI.getRepositoryList,
       payload
     );
+
     const checkFirst = data.url.split('&page=')[1];
     if (checkFirst === '1') {
       yield put(push(ROUTE_SEARCH_WITH_QUERY(payload.q)));
