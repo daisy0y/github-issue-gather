@@ -32,11 +32,7 @@ interface IconProps {
 const StyledListItem = styled(List.Item)`
   font-size: 24px;
   font-family: GmarketSansLight;
-  padding: 20px;
-  .tags {
-    padding: 5px;
-    font-family: GmarketSansLight;
-  }
+  padding: 40px 20px;
 
   .ant-anchor-link-title {
     font-size: 24px;
@@ -46,37 +42,14 @@ const StyledListItem = styled(List.Item)`
     color: #000;
   }
 
-  section.description {
-    margin: 10px 0;
-    font-size: 19px;
-  }
-
   p.issue {
-    margin-top: 5px;
-    font-size: 18px;
-  }
-  p.updated {
-    font-size: 14px;
-  }
-
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .add-button {
+    margin-top: 15px;
     font-size: 20px;
-    cursor: pointer;
   }
 
-  .ant-list-item-meta-description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    word-wrap: break-word;
-    line-height: 1.2em;
-    height: 3.6em;
+  .add-button {
+    font-size: 22px;
+    cursor: pointer;
   }
 
   .anticon.anticon-heart.active {
@@ -127,7 +100,11 @@ const ListItem = (props: ListItemProps) => {
     >
       <List.Item.Meta
         avatar={<Avatar src={avatar_url && avatar_url} />}
-        title={<a href={html_url}>{full_name}</a>}
+        title={
+          <a href={html_url} className="list-title">
+            {full_name}
+          </a>
+        }
         description={description}
       />
       {topics?.map(topic => (
