@@ -23,11 +23,7 @@ interface ListItemProps {
 const StyledListItem = styled(List.Item)`
   font-size: 24px;
   font-family: GmarketSansLight;
-  padding: 20px;
-  .tags {
-    padding: 5px;
-    font-family: GmarketSansLight;
-  }
+  padding: 40px 20px;
 
   .ant-anchor-link-title {
     font-size: 24px;
@@ -35,31 +31,6 @@ const StyledListItem = styled(List.Item)`
   }
   a.anchor {
     color: #000;
-  }
-
-  section.description {
-    margin: 10px 0;
-    font-size: 19px;
-  }
-
-  p.updated {
-    font-size: 14px;
-  }
-
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .ant-list-item-meta-description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    word-wrap: break-word;
-    line-height: 1.2em;
-    height: 3.6em;
   }
 `;
 const IssueListItem = (props: ListItemProps) => {
@@ -133,7 +104,11 @@ const IssueListItem = (props: ListItemProps) => {
     >
       <List.Item.Meta
         avatar={<Avatar src={avatar_url && avatar_url} />}
-        title={<a href={html_url}>{title}</a>}
+        title={
+          <a className="list-title" href={html_url}>
+            {title}
+          </a>
+        }
         description={body}
       />
 
