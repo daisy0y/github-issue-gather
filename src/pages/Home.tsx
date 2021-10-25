@@ -188,7 +188,7 @@ const Home = () => {
           isBookMark
         />
 
-        {(issues?.length as number) >= 1 && (
+        {issues && (issues?.length as number) > 1 ? (
           <div
             id="scrollableDiv"
             style={{
@@ -224,6 +224,23 @@ const Home = () => {
               />
             </InfiniteScroll>
           </div>
+        ) : (
+          issues &&
+          (issues?.length as number) === 0 && (
+            <Empty
+              className="empty"
+              description={
+                <div>
+                  <p className="empty-description">
+                    저장된 저장소에 이슈가 없어요!
+                    <br />
+                    관심있는 저장소를 저장하고 이슈를 모아보세요!
+                  </p>
+                </div>
+              }
+              imageStyle={{ height: '100%' }}
+            />
+          )
         )}
 
         {!bookMark && (
