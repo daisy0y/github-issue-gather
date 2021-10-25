@@ -188,7 +188,7 @@ const Home = () => {
           isBookMark
         />
 
-        {issues && (
+        {(issues?.length as number) >= 1 && (
           <div
             id="scrollableDiv"
             style={{
@@ -226,7 +226,7 @@ const Home = () => {
           </div>
         )}
 
-        {!bookMarkList && (
+        {!bookMark && (
           <Empty
             className="empty"
             description={
