@@ -5,7 +5,18 @@
   <img src='https://user-images.githubusercontent.com/61371367/138706355-ff93522a-51e1-4375-b04a-af5364d98489.png' width='400'/>
 </p>
 
+### 기술 스택 및 라이브러리
+1. React js
+2. redux, redux saga
+3. typescript
+4. octokit/core.js
+5. antd
+6. styled-components
 
+### 구현 기능
+1. github API를 이용한 repository 검색, issue 불러오기 기능
+2. 로컬 스토리지를 활용한 repository 북마크 기능 (최대 4개)
+3. 로컬 스토리지를 활용한 최근 검색어 기능 (최대10개, 밀어내기 형식)
 
 ### 설치 방법
 
@@ -30,8 +41,8 @@ Git Clone으로 프로젝트 환경 구성하기
 </p>
 1. 상단의 Input 형태의 버튼을 누르면 검색 모달이 토글됩니다.
 2. 검색 모달에서 원하는 repository명을 검색하면 관련 된 이름의 repository 목록이 생성됩니다. list는 한번에 10개씩 호출 됩니다.
-3. issue를 모아보기 원하는 repository를 북마크 버튼을 누르면 북마크에 저장됩니다.
-4. 메인 페이지로 돌아오면 해당 repository의 이슈들을 get 해옵니다. 
+3. issue를 모아보기 원하는 repository를 북마크 버튼을 누르면 북마크에 저장됩니다. repository 이름을 클릭하면 해당 페이지로 이동됩니다.
+4. 메인 페이지로 돌아오면 해당 repository의 이슈들을 get 해옵니다. issuse title을 클릭하면 해당 페이지로 이동됩니다.
 
 <p align='center'>
   <img src='https://user-images.githubusercontent.com/61371367/138715527-d49f0446-58c1-4ac7-b60a-43d6dee20aa3.gif' width='400' />
