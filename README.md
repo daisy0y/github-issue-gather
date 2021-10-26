@@ -39,6 +39,7 @@ Git Clone으로 프로젝트 환경 구성하기
 <p align='center'>
   <img src='https://user-images.githubusercontent.com/61371367/138714981-169288a9-6911-420a-bac7-f71dd31e2b7b.gif' width='400' />
 </p>
+
 1. 상단의 Input 형태의 버튼을 누르면 검색 모달이 토글됩니다.
 2. 검색 모달에서 원하는 repository명을 검색하면 관련 된 이름의 repository 목록이 생성됩니다. list는 한번에 10개씩 호출 됩니다.
 3. issue를 모아보기 원하는 repository를 북마크 버튼을 누르면 북마크에 저장됩니다. repository 이름을 클릭하면 해당 페이지로 이동됩니다.
