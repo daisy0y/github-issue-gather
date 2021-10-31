@@ -12,10 +12,11 @@ import {
   getRepositoryAction,
   handleAddBookMarkProps,
   removeBookMarkAction,
+  searchItem,
   setLoadingAction
 } from 'module/github';
 import ListItem from 'components/Item/ListItem';
-import { DEFAULT_PAGE, DEFAULT_PERPAGE } from 'libs/constants';
+import { addComma, DEFAULT_PAGE, DEFAULT_PERPAGE } from 'libs/constants';
 
 const StyledSearch = styled.div`
   header.search {
@@ -37,7 +38,9 @@ const Search = () => {
     (state: StoreState) => state.githubState
   );
   const [currentPage, setCurrentPage] = useState<number>(DEFAULT_PAGE);
-  const totalPage = (repositoryList?.data?.total_count as number) / 10;
+  const totalPage = Math.ceil(
+    (repositoryList?.data?.total_count as number) / DEFAULT_PERPAGE
+  );
   const dispatch = useDispatch();
   const history = useHistory();
   const keyword = history.location.pathname.split('q=')[1];
@@ -108,7 +111,7 @@ const Search = () => {
       <header className="search">
         총
         <strong className="total-count">
-          {repositoryList?.data.total_count || 0}
+          {addComma(repositoryList?.data.total_count as number) || 0}
         </strong>
         건이 검색 되었습니다.
       </header>
@@ -144,26 +147,15 @@ const Search = () => {
             scrollableTarget="scrollableDiv"
           >
             <List
-              dataSource={repositoryList?.data.items}
+              dataSource={repositoryList?.data?.items}
               itemLayout="vertical"
               renderItem={item => (
                 <ListItem
-                  id={item.id}
-                  owner={item.owner?.login as string}
-                  full_name={item.full_name}
-                  repo={item.name}
-                  topics={item.topics}
-                  html_url={item.html_url}
-                  description={item.description}
-                  avatar_url={item.owner?.avatar_url as string}
-                  forks_count={item.forks_count}
-                  open_issues_count={item.open_issues}
-                  watchers={item.watchers}
-                  pushed_at={item.pushed_at}
+                  searchItems={item as unknown as searchItem}
                   bookMarkList={bookMarkList}
                   handleAddBookMark={handleAddBookMark}
                   handleRemoveBookMark={handleRemoveBookMark}
-                ></ListItem>
+                />
               )}
             />
           </InfiniteScroll>

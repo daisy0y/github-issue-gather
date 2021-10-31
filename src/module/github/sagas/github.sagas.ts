@@ -1,5 +1,7 @@
 import { RequestError } from '@octokit/types';
 import { call, delay, put, takeLatest } from 'redux-saga/effects';
+import { push } from 'connected-react-router';
+import { ROUTE_SEARCH_WITH_QUERY } from 'routes/const';
 
 import { ActionType } from 'typesafe-actions';
 import {
@@ -10,11 +12,7 @@ import {
 } from '..';
 
 import * as Actions from '../actions/github.action';
-
 import { githubAPI } from '../apis/github.api';
-
-import { push } from 'connected-react-router';
-import { ROUTE_SEARCH_WITH_QUERY } from 'routes/const';
 
 function* getRepositorySaga(
   action: ActionType<typeof Actions.getRepositoryAction.request>
