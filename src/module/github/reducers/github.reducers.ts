@@ -117,7 +117,12 @@ export const githubReducer = createReducer<GitbubState, GihubAction>(
     produce(state, draft => {
       const payload = action.payload;
       draft.issueList = undefined;
-      draft.bookMarkList = payload;
+
+      if (!payload.length) {
+        draft.bookMarkList = undefined;
+      } else {
+        draft.bookMarkList = payload;
+      }
       alert(
         `북마크가 제거 되었습니다.\n현재 ${payload.length}개의 저장소가 북마크 되어있습니다.`
       );
@@ -132,6 +137,7 @@ export const githubReducer = createReducer<GitbubState, GihubAction>(
   .handleAction(removeRecentlySearchAction.success, (state, action) =>
     produce(state, draft => {
       const payload = action.payload;
+
       draft.recentlySearch = payload;
     })
   )

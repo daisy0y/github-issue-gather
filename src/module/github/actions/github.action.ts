@@ -3,7 +3,6 @@ import { ActionType, createAction, createAsyncAction } from 'typesafe-actions';
 import {
   addRecentlySearch,
   bookMarkList,
-  // listIssueParameters,
   listIssueReposResponse,
   listUserReposParameters,
   listUserReposResponse

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import styled from 'styled-components';
@@ -13,6 +13,7 @@ import {
   addRecentlySearchAction,
   getIssueAction,
   getRepositoryAction,
+  issueItems,
   listIssueReposResponse,
   removeBookMarkAction,
   removeRecentlySearchAction,
@@ -24,18 +25,16 @@ import {
 import { DEFAULT_PAGE, DEFAULT_PERPAGE } from 'libs';
 import MyBookMarkNSearch from 'components/MyBookMarkNSearch';
 import { StoreState } from 'module/index';
-import { useEffect } from 'react';
-import IssueListItem from 'components/Item/IssueListItem';
+import ListItem from 'components/Item/ListItem';
 
 const StyledHome = styled.div`
   position: relative;
   .spin {
     position: absolute;
-
     top: 500px;
     left: 50%;
     right: 50%;
-    background: #000000;
+    background: #000;
   }
   .search-input-wrap {
     display: flex;
@@ -210,16 +209,8 @@ const Home = () => {
               <List
                 dataSource={issues}
                 itemLayout="vertical"
-                renderItem={(item: any) => (
-                  <IssueListItem
-                    html_url={item.html_url}
-                    title={item.title}
-                    body={item.body}
-                    avatar_url={item.user.avatar_url}
-                    updated_at={item.updated_at}
-                    reactions={item.reactions}
-                    repository_url={item.repository_url}
-                  />
+                renderItem={item => (
+                  <ListItem issueItems={item as unknown as issueItems} />
                 )}
               />
             </InfiniteScroll>

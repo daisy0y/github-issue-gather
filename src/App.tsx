@@ -1,5 +1,4 @@
 import React, { Suspense, useEffect } from 'react';
-// import { Route, Router, Switch } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 
