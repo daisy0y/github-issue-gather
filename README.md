@@ -1,6 +1,7 @@
 # github-issue-gather
 >pc,mobile 어디서든, 자주 방문하는 repository를 즐겨찾기하고 issue를 모아보세요!
 
+>[서비스 바로가기](https://daisy0y.github.io/github-issue-gather)
 <p align='center'>
   <img src='https://user-images.githubusercontent.com/61371367/138706355-ff93522a-51e1-4375-b04a-af5364d98489.png' width='400'/>
 </p>
